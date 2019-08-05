@@ -525,7 +525,7 @@ static void hd44780_init_4bits(void)
 
 void hd44780_init(struct hd44780_bus *bus_props, uint8_t width, bool bus8, uint8_t num_lines, bool big_fonts)
 {
-    hd44780_params.width = width - 1;
+    hd44780_params.width = width;
     hd44780_params.position.x = 0;
     hd44780_params.position.y = 0;
 	hd44780_params.bus8 = bus8;
