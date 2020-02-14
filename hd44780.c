@@ -648,3 +648,12 @@ void hd44780_printf_xy(uint8_t x, uint8_t y, const char *fmt, ...)
 	hd44780_vsprintf(fmt, arg_ptr);
 	va_end(arg_ptr);
 }
+
+void hd44780_define_char(uint8_t addr, uint8_t* pattern, uint8_t size)
+{
+	uint8_t i;
+	hd44780_write(false, addr);
+	for(i = 0; i < size; i++){
+		hd44780_write(true, pattern[i]);
+	}
+}

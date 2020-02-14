@@ -146,4 +146,12 @@ void hd44780_printf(const char *fmt, ...);
  */
 void hd44780_printf_xy(uint8_t x, uint8_t y, const char *fmt, ...);
 
+/**
+ * @brief Put user-defined character pattern for the character to the character generator RAM
+ * @param	addr		Character address in the character generator RAM
+ * @param	pattern		Character pattern
+ * @param	size		Pattern size
+ */
+void hd44780_define_char(uint8_t addr, uint8_t* pattern, uint8_t size);
+
 #endif // _HD44780_H_
